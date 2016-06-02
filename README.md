@@ -42,12 +42,12 @@ You can use this to generate a `html` file with `react` component or output a `h
 ## Usage in command
 
 ```
-  $(npm bin)/render
+  ./node_modules/.bin/renderHTML
 ```
 
 - Use other config:
 ```
-  $(npm bin)/render --config render.config.js
+  ./node_modules/.bin/renderHTML --config render.config.js
 ```
 
 ## Usage in file
