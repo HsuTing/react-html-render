@@ -5,6 +5,7 @@ import path from 'path';
 import process from 'process';
 
 import Render from './../render';
+import Config from './../config';
 
 const base_path = process.cwd();
 
