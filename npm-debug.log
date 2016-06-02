@@ -1,0 +1,118 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@3.8.6
+3 info using node@v6.1.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/hsuting/Desktop/work/react-html-render',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/hsuting/.npm/react-html-render/1.0.0/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/hsuting/.npm correctMkdir not in flight; initializing
+10 info lifecycle react-html-render@1.0.0~prepublish: react-html-render@1.0.0
+11 silly lifecycle react-html-render@1.0.0~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/hsuting/.npm/react-html-render/1.0.0/package.tgz',
+12 verbose tar pack   '/Users/hsuting/Desktop/work/react-html-render' ]
+13 verbose tarball /Users/hsuting/.npm/react-html-render/1.0.0/package.tgz
+14 verbose folder /Users/hsuting/Desktop/work/react-html-render
+15 verbose addLocalTarball adding from inside cache /Users/hsuting/.npm/react-html-render/1.0.0/package.tgz
+16 verbose correctMkdir /Users/hsuting/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd react-html-render@1.0.0
+18 verbose afterAdd /Users/hsuting/.npm/react-html-render/1.0.0/package/package.json not in flight; writing
+19 verbose correctMkdir /Users/hsuting/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /Users/hsuting/.npm/react-html-render/1.0.0/package/package.json written
+21 silly publish { name: 'react-html-render',
+21 silly publish   version: '1.0.0',
+21 silly publish   description: 'Generate html files from react components',
+21 silly publish   main: './index.js',
+21 silly publish   bin: { renderHtml: './bin/render.js' },
+21 silly publish   scripts:
+21 silly publish    { test: 'echo "Error: no test specified" && exit 1',
+21 silly publish      build: 'rm -rf ./lib && babel --presets es2015,react -w --stage 0 src --out-dir lib' },
+21 silly publish   keywords: [ 'react', 'server', 'side', 'render', 'files', 'html' ],
+21 silly publish   author: { name: 'HsuTing' },
+21 silly publish   license: 'MIT',
+21 silly publish   devDependencies:
+21 silly publish    { 'babel-cli': '^6.8.0',
+21 silly publish      'babel-preset-es2015': '^6.6.0',
+21 silly publish      'babel-preset-react': '^6.5.0',
+21 silly publish      react: '^15.1.0',
+21 silly publish      'react-dom': '^15.1.0' },
+21 silly publish   dependencies:
+21 silly publish    { pug: '^2.0.0-alpha8',
+21 silly publish      react: '^15.1.0',
+21 silly publish      'react-dom': '^15.1.0' },
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/HsuTing/react-html-render.git' },
+21 silly publish   bugs: { url: 'https://github.com/HsuTing/react-html-render/issues' },
+21 silly publish   homepage: 'https://github.com/HsuTing/react-html-render#readme',
+21 silly publish   readme: '# React html render\n\nYou can use this to generate a `html` file with `react` component or output a `html` using `react server side rendering`.\n\n## Install\n\n```\n  npm install react-html-render\n```\n\n## Write config\n\n- default: `render.config.js`\n- example:\n```\n  var path = require(\'path\');\n\n  module.exports = { \n    entry: {\n      "index": {\n         path: path.join(__filename, \'./../base.pug\'),\n         options: {\n           "context": {path: path.join(__filename, "./../../lib/component"), props: {id: "1"}}\n         }   \n       }   \n    },  \n    output: {\n      filename: "[name].html",\n      path: path.join(__filename, "./../")\n    }\n  };\n```\n\n- Every object in `entry` will generate a `html` file.\n- Every object in `entry`:\n    - path -> the path of `pug` file (If you do not know what is `pug`, you can see [here](https://github.com/pugjs/pug)). If you do not set a path, this object will just combine every object in `options`.\n    - options -> the options of `pug` file. If you want to use react component, you need to write an object which have `path`, the path of react component. If you need to use `props`, you just need to add `props` in object.\n- `output`:\n    - filename -> filename is the name for output file and `[name]` will be replaced with the key of every object in `entry`. `defulat: [name].html`\n    - path -> the path for output files. `default: the same path as render.config.js`\n\n## Usage in command\n\n```\n  $(npm bin)/render\n```\n\n- Use other config:\n```\n  $(npm bin)/render --config render.config.js\n```\n\n## Usage in file\n\n```\n  var render = require(\'react-html-render\');\n\n  var output = render(\'./render.config.js\');\n  console.log(output);\n```\n- You just give a path of `react.config.js` to `react-html-render` function.\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: 'd858d9b1bcea9d4bad05c9e7387983f17b443dac',
+21 silly publish   _id: 'react-html-render@1.0.0',
+21 silly publish   _shasum: '7fcb42e24f620594a7355b01cc9c76e94588bf95',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name react-html-render
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npmjs.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'react-html-render',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   name: 'react-html-render',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npmjs.org/react-html-render
+28 verbose publish registryBase https://registry.npmjs.org/
+29 silly publish uploading /Users/hsuting/.npm/react-html-render/1.0.0/package.tgz
+30 verbose request uri https://registry.npmjs.org/react-html-render
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 3:15:30 AM
+33 verbose request using bearer token for auth
+34 verbose request id 1a821e16948b771d
+35 http request PUT https://registry.npmjs.org/react-html-render
+36 http 403 https://registry.npmjs.org/react-html-render
+37 verbose headers { 'content-type': 'application/json',
+37 verbose headers   'cache-control': 'max-age=300',
+37 verbose headers   'content-length': '95',
+37 verbose headers   'accept-ranges': 'bytes',
+37 verbose headers   date: 'Thu, 02 Jun 2016 19:15:32 GMT',
+37 verbose headers   via: '1.1 varnish',
+37 verbose headers   connection: 'keep-alive',
+37 verbose headers   'x-served-by': 'cache-sin6920-SIN',
+37 verbose headers   'x-cache': 'MISS',
+37 verbose headers   'x-cache-hits': '0',
+37 verbose headers   'x-timer': 'S1464894931.520436,VS0,VE853',
+37 verbose headers   vary: 'Accept-Encoding' }
+38 verbose request invalidating /Users/hsuting/.npm/registry.npmjs.org/react-html-render on PUT
+39 error publish Failed PUT 403
+40 verbose stack Error: "You cannot publish over the previously published version 1.0.0." : react-html-render
+40 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+40 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+40 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+40 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:199:22)
+40 verbose stack     at emitTwo (events.js:106:13)
+40 verbose stack     at Request.emit (events.js:191:7)
+40 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1036:10)
+40 verbose stack     at emitOne (events.js:101:20)
+40 verbose stack     at Request.emit (events.js:188:7)
+40 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:963:12)
+41 verbose statusCode 403
+42 verbose pkgid react-html-render
+43 verbose cwd /Users/hsuting/Desktop/work/react-html-render
+44 error Darwin 15.5.0
+45 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+46 error node v6.1.0
+47 error npm  v3.8.6
+48 error code E403
+49 error "You cannot publish over the previously published version 1.0.0." : react-html-render
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]
