@@ -11,22 +11,22 @@
 - default: `render.config.js`
 - example:
 ```
-var path = require('path');
+  var path = require('path');
 
-module.exports = { 
-  entry: {
-    "index": {
-       path: path.join(__filename, './../base.pug'),
-       options: {
-         "context": {path: path.join(__filename, "./../../lib/component"), props: {id: "1"}}
+  module.exports = { 
+    entry: {
+      "index": {
+         path: path.join(__filename, './../base.pug'),
+         options: {
+           "context": {path: path.join(__filename, "./../../lib/component"), props: {id: "1"}}
+         }   
        }   
-     }   
-  },  
-  output: {
-    filename: "[name].html",
-    path: path.join(__filename, "./../")
-  }
-};
+    },  
+    output: {
+      filename: "[name].html",
+      path: path.join(__filename, "./../")
+    }
+  };
 ```
 
 - Every object in `entry` will generate a `html` file.
@@ -51,9 +51,9 @@ module.exports = {
 ## Usage in file
 
 ```
-var render = require('react-html-render');
+  var render = require('react-html-render');
 
-var output = render('./render.config.js');
-console.log(output);
+  var output = render('./render.config.js');
+  console.log(output);
 ```
-- You just give a path to `react-html-render` function.
+- You just give a path of `react.config.js` to `react-html-render` function.
