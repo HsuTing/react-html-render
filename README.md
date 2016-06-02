@@ -58,4 +58,4 @@ You can use this to generate a `html` file with `react` component or output a `h
   var output = render('./render.config.js');
   console.log(output);
 ```
-- You just give a path of `react.config.js` to `react-html-render` function.
+- You just need to give a path of `react.config.js` to `react-html-render` function.
