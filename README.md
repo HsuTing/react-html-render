@@ -1,5 +1,7 @@
 # React html render
 
+You can use this to generate a `html` file with `react` component or output a `html` using `react server side rendering`.
+
 ## Install
 
 ```
