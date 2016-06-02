@@ -53,9 +53,11 @@ You can use this to generate a `html` file with `react` component or output a `h
 ## Usage in file
 
 ```
+  var path = require('path');
+  var process = require('process');
   var render = require('react-html-render');
 
-  var output = render('./render.config.js');
+  var output = render(path.join(process.cwd(), '..', './render.config.js'));
   console.log(output);
 ```
 - You just need to give a path of `react.config.js` to `react-html-render` function.

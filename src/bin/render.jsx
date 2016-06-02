@@ -9,7 +9,7 @@ import Render from './../render';
 const base_path = process.cwd();
 
 let config_path_flag = false;
-let config_path = path.resolve(base_path, './render.config_path');
+let config_path = path.resolve(base_path, './render.config.js');
 
 process.argv.forEach((val, index, array) => {
   if(index === 0 || index === 1) return;
